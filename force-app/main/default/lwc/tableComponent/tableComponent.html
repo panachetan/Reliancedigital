@@ -1,0 +1,30 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card>
+        Total records = {totalRecords}<br/>
+        selected Records = {selectedRowsCount}<br/><br/>
+
+        <lightning-button variant="destructive" icon-name="utility:delete" label="Delete Selected Records" onclick={deleteSelectedRecordsHandler}></lightning-button><br/>
+
+
+        <lightning-combobox
+            name="accType"
+            label="Select Account Type"
+            placeholder="Select Account Type"
+            options={accTypes}
+            onchange={handleAccountTypeChange} ></lightning-combobox> <br />
+
+
+            <lightning-datatable
+            key-field="Id"
+            data={accList}
+            columns={columns}    
+            draft-values={draftValues} 
+            onrowselection={selectedRecordsHandler}                     
+            onsave={saveHandler}   > 
+</lightning-datatable>
+
+    </lightning-card>
+</template>

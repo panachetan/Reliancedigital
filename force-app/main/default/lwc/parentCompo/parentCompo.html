@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        Parent Component, Parent salary is={salary}, Employee Name ={emplyeeName}<br/>
+
+        <lightning-input type=text label="enter name" data-formfield="AccName"></lightning-input><br/>
+        <lightning-button variant="brand" label="send" icon-name="utility:send" onclick={sendButtonHandler}></lightning-button>
+
+        <c-child-compo child-data={salary} recieved-employee-name={emplyeeName} recieved-car-details-from-parent={car} recieve-object-name-from-parent={ObjAccount}
+        contact-list-recieved-from-parent ={conList}></c-child-compo>
+    </lightning-card>
+</template>

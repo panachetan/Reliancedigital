@@ -1,0 +1,17 @@
+<template>
+    <lightning-card>
+        Child Compo, {childData}, Recieved Employee Name form Parent={recievedEmployeeName}<br>
+        Car Make = {recievedCarDetailsFromParent.Make}<br/>
+        Car Model = {recievedCarDetailsFromParent.Model}<br/>
+        Account Name = {recieveObjectNameFromParent.Name}<br/>
+
+        <lightning-datatable
+        key-field="Id"
+            data={contactListRecievedFromParent}
+            columns={columns}    
+            draft-values={draftValues} 
+            onrowselection={selectedRecordsHandler}                     
+            onsave={saveHandler}
+            ></lightning-datatable>
+    </lightning-card>
+</template>

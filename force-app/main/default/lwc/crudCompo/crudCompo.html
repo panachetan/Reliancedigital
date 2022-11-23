@@ -1,0 +1,22 @@
+<template>
+<lightning-card>
+
+<lightning-button icon-name="utility:record_create" variant="neutral" label="create" onclick={createAccountHandler}></lightning-button> &nbsp;
+<lightning-button icon-name="utility:search" variant="brand" label="search" onclick={searchAccountHandler}></lightning-button> &nbsp;
+<lightning-button icon-name="utility:edit" variant="success" label="edit" onclick={updateAccountHandler}></lightning-button> &nbsp;
+<lightning-button icon-name="utility:delete" variant="destructive" label="delete" onclick={deleteAccountHandler}></lightning-button> &nbsp;
+<lightning-button icon-name="utility:undelete" variant="brand" label="Undelete" onclick={undeleteAccountHandler}> </lightning-button> &nbsp;  <br />
+
+<lightning-input data-formfield="accountName" type="text" placeholder="Enter name" label="Enter account name" name="accountName" required="true" ></lightning-input><br />
+<lightning-input data-formfield="accountType" type="text" placeholder="Enter type"  name="accountName"  ></lightning-input><br />
+<lightning-input data-formfield="accountRating" type="text" placeholder="Enter rating" name="accountName"  ></lightning-input><br />
+<lightning-input data-formfield="accountSLA" type="text" placeholder="Enter SLA"  name="accountName" ></lightning-input><br />
+
+Account Details<br />
+Account Name = <br />
+Account Type = <br />
+Account Rating =<br />
+Account SLA = <br />
+
+</lightning-card>
+</template>

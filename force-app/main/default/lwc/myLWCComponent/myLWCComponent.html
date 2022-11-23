@@ -1,0 +1,52 @@
+<template>
+<lightning-card>
+<lightning-input type="text" label="Enter Account Name" data-formfield="AccountName"  ></lightning-input><br/>
+<lightning-input type="text" label="Enter Account Type" data-formfield="AccountType"  ></lightning-input><br/>
+
+<lightning-button variant="brand" label="save" icon-name="utility:record_create" onclick={CreateAccountController}></lightning-button> &nbsp;
+<lightning-button variant="success" label="search" icon-name="utility:search" onclick={SearchAccountController}></lightning-button> &nbsp;
+<lightning-button variant="brand" label="update" icon-name="utility:edit" onclick={UpdateAccountController}></lightning-button> &nbsp;
+<lightning-button variant="destructive" label="delete" icon-name="utility:delete" onclick={deleteAccountController}></lightning-button> &nbsp;<br/>
+
+
+Account Name ={objAccount.Name}<br/>
+Account Type ={objAccount.Type}<br/>
+
+<template if:true={showTableFlag}>
+<table aria-describedby="conatact-list" class="slds-table  slds-table_bordered ">
+
+    <!--Header of the table-->
+    <thead>
+        <tr class="slds-line-height_reset">
+            <th class="slds-size_1-of-6 " scope="col"> Account Name </th>
+            <th class="slds-size_1-of-6 " scope="col"> Type </th>
+           
+       </tr>
+    </thead>
+
+    <!--Body of the table-->
+    <tbody>
+       
+            <tr >
+                <td>  {objAccount.Name}   </td>
+                <td>  {objAccount.Type}   </td>
+                
+            </tr>
+            
+        
+    </tbody>
+</table>
+</template>
+
+
+<template if:true={showSpinnerFlag}>
+        <div class="exampleHolder">
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </div>
+</template>
+
+
+
+
+</lightning-card>
+</template>

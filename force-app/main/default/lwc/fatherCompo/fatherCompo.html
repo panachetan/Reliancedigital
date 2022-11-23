@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="father compo">
+        <h1>Call child JS method on button click</h1><br/>
+<lightning-button variant="brand" icon-name="utility:send" label="Call child JS controller" onclick={fatherJSHandler}></lightning-button> &nbsp;
+<lightning-button variant="success" icon-name="utility:send" label="Reset slider" onclick={fatherResetsliderJSHandler}></lightning-button>
+    <c-son-compo></c-son-compo>
+</lightning-card>
+</template>

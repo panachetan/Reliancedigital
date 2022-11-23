@@ -1,0 +1,20 @@
+<template>
+<lightning-card title="Regisrtation form">
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Enter Firstname" name="firstName"></lightning-input> <br />
+        <lightning-input type="text" label="Enter Lastname" name="lastName"></lightning-input> <br />
+        <lightning-input type="text" label="Enter Gender" name="gender"></lightning-input> <br />
+        <lightning-input type="date" label="Enter dob" name="dob"></lightning-input> <br />
+
+        <lightning-button variant="brand" label="submit" title="submit" onclick={showname} class="slds-m-left_x-small"></lightning-button><br />
+
+Firstname is = {firstName}<br />
+Lastname is = {lastName}<br />
+Gender = {gender}<br />
+dob = {dob}<br />
+
+
+    </div>
+
+</lightning-card>    
+</template>
